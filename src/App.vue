@@ -2,17 +2,19 @@
   <div id="app">
     <img src="./assets/logo.png">
     <router-view/>
-    <list-item></list-item>
+    <list-view>
+
+    </list-view>
   </div>
 </template>
 
 <script>
-  import ListItem from "./components/ListItem";
+import ListView from './components/ListView'
 
-  export default {
-    components: {ListItem},
-    name: 'App'
-  }
+export default {
+  components: {ListView},
+  name: 'App'
+}
 </script>
 
 <style>
