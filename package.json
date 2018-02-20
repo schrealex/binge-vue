@@ -1,7 +1,7 @@
 {
-  "name": "y",
+  "name": "binge-vue",
   "version": "1.0.0",
-  "description": "y",
+  "description": "An app to view all your movie information",
   "author": "schrealex",
   "private": true,
   "scripts": {
@@ -38,8 +38,9 @@
     "cross-spawn": "^5.0.1",
     "css-loader": "^0.28.0",
     "eslint": "^4.15.0",
-    "eslint-config-standard": "^10.2.1",
+    "eslint-config-airbnb-base": "^11.3.0",
     "eslint-friendly-formatter": "^3.0.0",
+    "eslint-import-resolver-webpack": "^0.8.3",
     "eslint-loader": "^1.7.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.2.0",
