@@ -20,10 +20,11 @@ export default {
     loadItems: function() {
       Vue.http
         .get(
-          "http://search.nintendo-europe.com/nl/select?q=Mario%20Kart%208%20Deluxe&rows=5&start=0&wt=json&fq=type:GAME%20AND%20system_type:nintendoswitch*%20AND%20product_code_txt:*"
+          "https://search.nintendo-europe.com/nl/select?q=Mario%20Kart%208%20Deluxe&rows=5&start=0&wt=json&fq=type:GAME%20AND%20system_type:nintendoswitch*%20AND%20product_code_txt:*"
         )
         .then(
           response => {
+            console.log("Response:");
             console.log(response);
             this.items = ["ABC", "DEF"];
           },
