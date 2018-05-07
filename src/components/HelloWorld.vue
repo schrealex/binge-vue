@@ -1,20 +1,17 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <ul>
-      <li v-for="star in stars" v-bind:key="star.name">
-      <div class="row">
-        <img :src="getPortrait(star.portrait)" class="img-thumbnail rounded float-left" />
-        <span class="star-name col-md-3">{{ star.name }}</span>
-      </div>
-      <div class="row">
-        <p class="star-biography">
-          {{ star.biography }}
-        </p>
-      </div>
-      </li>
-    </ul>
-  </div>
+  <ul>
+    <li v-for="star in stars" v-bind:key="star.name">
+    <div class="row">
+      <img :src="getPortrait(star.portrait)" class="img-thumbnail rounded float-left" />
+      <span class="star-name col-md-3">{{ star.name }}</span>
+    </div>
+    <div class="row">
+      <p class="star-biography">
+        {{ star.biography }}
+      </p>
+    </div>
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -49,8 +46,7 @@ Johansson was born in New York City. Her father, Karsten Johansson, is a Danish-
           biography:
             "Jennifer Mary Hoffman (Gouda, 23 december 1980) is een Nederlands actrice en presentatrice, die bekendheid verwierf door haar rol als Sam de Graaf in de serie Westenwind (1999-2002). Ze is eveneens bekend van haar rollen als Maxime Noordhof in Spoorloos Verdwenen (2006-2008), Puck Rademaker in Verborgen Gebreken (2009-2011), Lisa de Graaf in Dokter Tinus (2012-2016), Juul in Zomer in Zeeland (2018) en als Hannah in De Luizenmoeder (2018)."
         }
-      ],
-      msg: "Welcome to Your Vue.js App"
+      ]
     };
   },
   methods: {

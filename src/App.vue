@@ -1,26 +1,49 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <div class="page-container">
+      <md-app md-waterfall md-mode="overlap">
+        <md-app-toolbar class="md-primary md-large">
+          <div class="md-toolbar-row">
+            <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
+              <md-icon>menu</md-icon>
+            </md-button>
+
+            <span class="md-title">B I N G E</span>
+          </div>
+        </md-app-toolbar>
+       
+        <side-menu :mVisible="menuVisible"></side-menu>
+
+        <md-app-content>
+          <router-view/>
+        </md-app-content>
+      </md-app>
+    </div>
   </div>
 </template>
 
 <script>
-  import ListItem from './components/ListItem';
+import ListItem from "./components/ListItem";
+import Menu from "./components/Menu";
 
-  export default {
-  components: {ListItem},
-  name: 'App',
+export default {
+  components: { ListItem, Menu },
+  name: "App",
+  data: function data() {
+    return {
+      menuVisible: false
+    };
+  }
 };
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.md-app-content {
+  max-height: 800px;
+}
+
+.md-drawer {
+  width: 300px;
+  max-width: calc(100vw - 125px);
 }
 </style>
