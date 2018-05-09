@@ -7,12 +7,14 @@
             <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
               <md-icon>menu</md-icon>
             </md-button>
-
+            
             <span class="md-title">B I N G E</span>
           </div>
         </md-app-toolbar>
        
-        <side-menu :mVisible="menuVisible"></side-menu>
+        <md-app-drawer :md-active.sync="menuVisible">
+          <side-menu />
+        </md-app-drawer>
 
         <md-app-content>
           <router-view/>
@@ -23,11 +25,10 @@
 </template>
 
 <script>
-import ListItem from "./components/ListItem";
-import Menu from "./components/Menu";
+import SideMenu from "./components/SideMenu";
 
 export default {
-  components: { ListItem, Menu },
+  components: { SideMenu },
   name: "App",
   data: function data() {
     return {

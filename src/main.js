@@ -6,6 +6,7 @@ import BootstrapVue from "bootstrap-vue/dist/bootstrap-vue.esm";
 import VueMaterial from "vue-material";
 import {
   MdApp,
+  MdAvatar,
   MdButton,
   MdCard,
   MdDrawer,
@@ -20,6 +21,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 
 Vue.use(MdApp);
+Vue.use(MdAvatar);
 Vue.use(MdButton);
 Vue.use(MdCard);
 Vue.use(MdDrawer);

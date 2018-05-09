@@ -1,5 +1,5 @@
 <template>
-  <md-app-drawer :md-active.sync="mVisible">
+  <div>
     <md-toolbar class="md-transparent" md-elevation="0">
       Navigation
     </md-toolbar>
@@ -25,13 +25,12 @@
         <span class="md-list-item-text">Spam</span>
       </md-list-item>
     </md-list>
-  </md-app-drawer>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "side-menu",
-  props: ["mVisible"]
+  name: "side-menu"
 };
 </script>
 
