@@ -1,9 +1,6 @@
 # binge-vue
-VueJS project
-=======
-# y
 
-> y
+> An app to view all your movie information
 
 ## Build Setup
 
